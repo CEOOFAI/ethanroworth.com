@@ -1,0 +1,94 @@
+{
+  "common": {
+    "nav": {
+      "work": "Proyectos",
+      "services": "Servicios",
+      "about": "Sobre mi",
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "cta": {
+      "seeWork": "Ver mis proyectos",
+      "getInTouch": "Contactar",
+      "learnMore": "Saber mas",
+      "viewProject": "Ver proyecto",
+      "viewAll": "Ver todos los proyectos",
+      "nextProject": "Siguiente proyecto"
+    },
+    "footer": {
+      "tagline": "Creando experiencias digitales en Gibraltar y La Linea",
+      "rights": "Todos los derechos reservados.",
+      "backToTop": "Volver arriba"
+    }
+  },
+  "home": {
+    "hero": {
+      "greeting": "Hola, soy",
+      "name": "Ethan Roworth",
+      "title": "Diseno Web, Automatizacion IA y SEO",
+      "subtitle": "Creando experiencias digitales distintivas para negocios en Gibraltar y La Linea de la Concepcion.",
+      "cta": "Ver mis proyectos",
+      "scroll": "Desliza para explorar"
+    },
+    "work": {
+      "label": "Proyectos Destacados",
+      "title": "Proyectos de los que estoy orgulloso",
+      "viewAll": "Ver todos los proyectos"
+    },
+    "services": {
+      "label": "Lo que hago",
+      "title": "Servicios",
+      "webDesign": {
+        "title": "Diseno Web",
+        "description": "Sitios web personalizados que se ven increibles y convierten visitantes en clientes. Primero movil, rapido y listo para SEO."
+      },
+      "aiAutomation": {
+        "title": "Automatizacion IA",
+        "description": "Flujos de trabajo inteligentes que te ahorran horas cada semana. Deja que la IA se encargue de lo repetitivo."
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Trafico organico a traves de contenido multilingue, segmentacion de palabras clave y SEO tecnico. Construido para posicionar."
+      }
+    },
+    "process": {
+      "label": "Como trabajo",
+      "title": "De la idea al lanzamiento",
+      "steps": {
+        "discovery": {
+          "title": "Descubrimiento",
+          "description": "Hablamos sobre tu negocio, tus objetivos y lo que necesitas. Sin jerga, solo una conversacion real."
+        },
+        "design": {
+          "title": "Diseno",
+          "description": "Creo un diseno que se adapta a tu marca y habla a tu audiencia. Lo ves antes de que se construya nada."
+        },
+        "build": {
+          "title": "Construccion",
+          "description": "Tu sitio se construye con codigo limpio, tiempos de carga rapidos y SEO incorporado desde el principio."
+        },
+        "launch": {
+          "title": "Lanzamiento",
+          "description": "Salimos en vivo. Me aseguro de que todo funcione perfectamente y te entrego las llaves de tu nuevo hogar digital."
+        }
+      }
+    },
+    "about": {
+      "label": "Sobre mi",
+      "title": "La persona detras de los pixeles",
+      "quote": "Deje el trabajo de oficina a los 19 para construir la web.",
+      "description": "Soy Ethan, tengo 19 anos, vivo en Gibraltar. Deje el trabajo de 9 a 5 para construir sitios web, automatizar flujos de trabajo y hacer crecer negocios a traves del SEO. Actualmente gestiono mas de 16 sitios en inmobiliaria, turismo y servicios locales.",
+      "link": "Mas sobre mi"
+    },
+    "stats": {
+      "sites": "Sitios gestionados",
+      "languages": "Idiomas",
+      "satisfaction": "Satisfaccion"
+    },
+    "ctaSection": {
+      "title": "Construyamos algo.",
+      "description": "Tienes un proyecto en mente? Me encantaria saber mas. Ya sea un nuevo sitio web, un flujo de automatizacion o una estrategia SEO, hagamoslo realidad.",
+      "cta": "Contactar"
+    }
+  }
+}

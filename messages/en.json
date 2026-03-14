@@ -1,0 +1,94 @@
+{
+  "common": {
+    "nav": {
+      "work": "Work",
+      "services": "Services",
+      "about": "About",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "cta": {
+      "seeWork": "See My Work",
+      "getInTouch": "Get in Touch",
+      "learnMore": "Learn More",
+      "viewProject": "View Project",
+      "viewAll": "View All Work",
+      "nextProject": "Next Project"
+    },
+    "footer": {
+      "tagline": "Building digital experiences in Gibraltar & La Linea",
+      "rights": "All rights reserved.",
+      "backToTop": "Back to top"
+    }
+  },
+  "home": {
+    "hero": {
+      "greeting": "Hi, I'm",
+      "name": "Ethan Roworth",
+      "title": "Web Design, AI Automation & SEO",
+      "subtitle": "Crafting distinctive digital experiences for businesses in Gibraltar and La Linea de la Concepcion.",
+      "cta": "See My Work",
+      "scroll": "Scroll to explore"
+    },
+    "work": {
+      "label": "Selected Work",
+      "title": "Projects I'm proud of",
+      "viewAll": "View All Work"
+    },
+    "services": {
+      "label": "What I Do",
+      "title": "Services",
+      "webDesign": {
+        "title": "Web Design",
+        "description": "Custom websites that look incredible and convert visitors into customers. Mobile-first, fast, and SEO-ready."
+      },
+      "aiAutomation": {
+        "title": "AI Automation",
+        "description": "Smart workflows and automations that save you hours every week. Let AI handle the repetitive stuff."
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Organic traffic through multilingual content, keyword targeting, and technical SEO. Built to rank."
+      }
+    },
+    "process": {
+      "label": "How I Work",
+      "title": "From idea to launch",
+      "steps": {
+        "discovery": {
+          "title": "Discovery",
+          "description": "We talk about your business, your goals, and what you need. No jargon, just a real conversation."
+        },
+        "design": {
+          "title": "Design",
+          "description": "I create a design that fits your brand and speaks to your audience. You see it before anything gets built."
+        },
+        "build": {
+          "title": "Build",
+          "description": "Your site gets built with clean code, fast loading times, and SEO baked in from the start."
+        },
+        "launch": {
+          "title": "Launch",
+          "description": "We go live. I make sure everything works perfectly and hand you the keys to your new digital home."
+        }
+      }
+    },
+    "about": {
+      "label": "About Me",
+      "title": "The person behind the pixels",
+      "quote": "I quit the 9-to-5 at 19 to build the web.",
+      "description": "I'm Ethan, 19, based in Gibraltar. I quit the 9-to-5 to build websites, automate workflows, and grow businesses through SEO. Currently managing 16+ sites across real estate, tourism, and local services.",
+      "link": "More about me"
+    },
+    "stats": {
+      "sites": "Sites Managed",
+      "languages": "Languages",
+      "satisfaction": "Satisfaction"
+    },
+    "ctaSection": {
+      "title": "Let's build something.",
+      "description": "Got a project in mind? I'd love to hear about it. Whether it's a new website, an automation workflow, or an SEO strategy, let's make it happen.",
+      "cta": "Get in Touch"
+    }
+  }
+}
