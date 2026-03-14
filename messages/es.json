@@ -90,5 +90,182 @@
       "description": "Tienes un proyecto en mente? Me encantaria saber mas. Ya sea un nuevo sitio web, un flujo de automatizacion o una estrategia SEO, hagamoslo realidad.",
       "cta": "Contactar"
     }
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "Hablemos.",
+    "subtitle": "Cuentame sobre tu proyecto. Te respondo en menos de 24 horas.",
+    "form": {
+      "name": "Tu Nombre",
+      "namePlaceholder": "Juan Garcia",
+      "email": "Tu Email",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "service": "Que necesitas?",
+      "budget": "Rango de Presupuesto",
+      "message": "Tu Mensaje",
+      "messagePlaceholder": "Cuentame sobre tu proyecto, tus objetivos y lo que buscas...",
+      "submit": "Enviar Mensaje",
+      "sent": "Mensaje Enviado!"
+    },
+    "aside": {
+      "email": "Escribeme directamente",
+      "location": "Ubicacion",
+      "response": "Tiempo de Respuesta",
+      "responseTime": "Menos de 24 horas",
+      "bookCall": "Prefieres hablar?",
+      "bookCallDescription": "Reserva una llamada gratuita de 15 minutos. Sin compromiso, solo una charla sobre tu proyecto.",
+      "bookCallCta": "Reservar Llamada"
+    }
+  },
+  "about": {
+    "label": "Sobre Mi",
+    "title": "La historia completa.",
+    "intro1": "Soy Ethan, tengo 19 anos, vivo en Gibraltar. Deje mi trabajo de oficina para dedicarme completamente a construir sitios web, automatizar flujos de trabajo y hacer crecer negocios con SEO.",
+    "intro2": "Creo que la mejor forma de aprender es haciendo. Asi que construi mas de 16 sitios en inmobiliaria, turismo y servicios locales para demostrar que podia hacerlo de verdad.",
+    "quote": "\"Deje el trabajo de oficina a los 19 para construir la web.\"",
+    "story": "La mayoria de personas de mi edad estan en la universidad o escalando posiciones en una empresa. Yo elegi un camino diferente. Aprendi diseno web, SEO y automatizacion con IA construyendo proyectos reales para nichos reales. Sin cursos, sin bootcamps. Solo publicando trabajo y aprendiendo de cada error.",
+    "stats": "16+ sitios construidos · Bilingue (EN/ES) · Gibraltar y La Linea",
+    "timelineLabel": "El Camino",
+    "timelineTitle": "Como llegue aqui.",
+    "timeline": {
+      "started": {
+        "title": "Empece a aprender desarrollo web",
+        "description": "Aprendi HTML, CSS y JavaScript. Construi mis primeros sitios. Me engancho la idea de crear cosas para internet."
+      },
+      "portfolio": {
+        "title": "Construi el portfolio SEO",
+        "description": "Empece a comprar dominios y construir sitios de contenido enfocados en Gibraltar y La Linea. Inmobiliaria, turismo, relocation, fitness."
+      },
+      "quit": {
+        "title": "Deje el trabajo de oficina",
+        "description": "Deje mi trabajo para dedicarme al freelance a tiempo completo. Da miedo? Si. Vale la pena? Totalmente. El tiempo es lo mas valioso que tengo."
+      },
+      "freelance": {
+        "title": "Lance servicios freelance",
+        "description": "Empece a ofrecer diseno web, automatizacion IA y SEO a negocios en Gibraltar y La Linea. Construi este sitio para demostrar lo que puedo hacer."
+      }
+    },
+    "skillsLabel": "Herramientas",
+    "skillsTitle": "Con que trabajo.",
+    "valuesLabel": "Mis Valores",
+    "valuesTitle": "Como trabajo.",
+    "values": {
+      "craft": {
+        "title": "Calidad sobre velocidad",
+        "description": "Prefiero tomarme un dia extra y entregar algo excelente que apurarme con algo mediocre. Cada proyecto recibe toda mi atencion."
+      },
+      "honesty": {
+        "title": "Hablar claro",
+        "description": "Sin jerga, sin rodeos. Te digo lo que pienso, lo que puedo hacer y lo que es realista. Siempre sabras como van las cosas."
+      },
+      "speed": {
+        "title": "Publicar rapido, mejorar despues",
+        "description": "Lo perfecto es enemigo de lo bueno. Publico, recibo feedback y mejoro. Tu sitio sale rapido y mejora desde ahi."
+      }
+    },
+    "ctaTitle": "Quieres trabajar juntos?",
+    "ctaCta": "Contactar"
+  },
+  "work": {
+    "label": "Portfolio",
+    "title": "Mi trabajo."
+  },
+  "services": {
+    "label": "Servicios",
+    "title": "Lo que construyo.",
+    "subtitle": "Diseno web, automatizacion IA y SEO para negocios en Gibraltar y La Linea. Todo lo que necesitas para verte genial online y que te encuentren.",
+    "details": {
+      "webDesign": {
+        "title": "Diseno Web",
+        "description": "Sitios web personalizados construidos desde cero. Sin plantillas, sin page builders. Codigo real, diseno real, construido para convertir.",
+        "point1": "Diseno mobile-first y responsive",
+        "point2": "Velocidad de carga rapida (optimizado para Core Web Vitals)",
+        "point3": "Listo para SEO desde el primer dia",
+        "point4": "Sistema de gestion de contenido para que puedas actualizarlo tu mismo"
+      },
+      "aiAutomation": {
+        "title": "Automatizacion IA",
+        "description": "Flujos de trabajo inteligentes que se encargan de lo repetitivo para que puedas enfocarte en lo importante. Ahorra horas cada semana.",
+        "point1": "Agentes de IA y chatbots personalizados",
+        "point2": "Flujos automaticos de email y seguimiento",
+        "point3": "Procesamiento de datos y reportes",
+        "point4": "Integracion con tus herramientas actuales"
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Aparece en Google. Contenido multilingue, SEO tecnico y segmentacion de palabras clave para el mercado de Gibraltar.",
+        "point1": "Investigacion de palabras clave y estrategia de contenido",
+        "point2": "Contenido multilingue (ingles y espanol)",
+        "point3": "SEO tecnico (schema, sitemaps, velocidad)",
+        "point4": "Reportes mensuales y recomendaciones"
+      }
+    },
+    "pricingLabel": "Precios",
+    "pricingTitle": "Precios simples y honestos.",
+    "popular": "Mas Popular",
+    "packages": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfecto para pequenos negocios locales que necesitan presencia profesional online."
+      },
+      "business": {
+        "name": "Business",
+        "description": "Para negocios en crecimiento que necesitan mas funciones y flexibilidad."
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Paquete completo para negocios que quieren todo bien hecho."
+      }
+    },
+    "features": {
+      "fivePages": "Hasta 5 paginas",
+      "responsive": "Diseno responsive para movil",
+      "contactForm": "Formulario de contacto",
+      "basicSeo": "Configuracion SEO basica",
+      "analytics": "Integracion con Google Analytics",
+      "oneRevision": "1 ronda de revisiones",
+      "oneToTwoWeeks": "Entrega en 1-2 semanas",
+      "tenPages": "Hasta 10 paginas",
+      "starterPlus": "Todo lo del Starter",
+      "cms": "Sistema de gestion de contenido",
+      "blog": "Seccion de blog o noticias",
+      "gmb": "Optimizacion de Google My Business",
+      "social": "Integracion con redes sociales",
+      "twoRevisions": "2 rondas de revisiones",
+      "twoToThreeWeeks": "Entrega en 2-3 semanas",
+      "twentyPages": "Hasta 20 paginas",
+      "businessPlus": "Todo lo del Business",
+      "multilingual": "Soporte multilingue",
+      "advancedSeo": "SEO avanzado",
+      "ecommerce": "Integracion e-commerce o reservas",
+      "custom": "Funcionalidad personalizada",
+      "threeRevisions": "3 rondas de revisiones",
+      "threeToFiveWeeks": "Entrega en 3-5 semanas"
+    },
+    "getStarted": "Empezar",
+    "pricingNote": "Todos los precios son unicos. Planes de gestion mensual disponibles desde 60 GBP/mes.",
+    "processLabel": "Como Funciona",
+    "processTitle": "De la idea al lanzamiento.",
+    "process": {
+      "discovery": {
+        "title": "Descubrimiento",
+        "description": "Hablamos sobre tu negocio, tus objetivos y lo que necesitas. Sin jerga, solo una conversacion real."
+      },
+      "design": {
+        "title": "Diseno",
+        "description": "Creo un diseno que se adapta a tu marca y habla a tu audiencia. Lo ves antes de que se construya nada."
+      },
+      "build": {
+        "title": "Construccion",
+        "description": "Tu sitio se construye con codigo limpio, tiempos de carga rapidos y SEO incorporado desde el principio."
+      },
+      "launch": {
+        "title": "Lanzamiento",
+        "description": "Salimos en vivo. Me aseguro de que todo funcione perfectamente y te entrego las llaves de tu nuevo hogar digital."
+      }
+    },
+    "ctaTitle": "Listo para empezar?",
+    "ctaDescription": "Hablemos de tu proyecto. Sin compromiso, solo una conversacion.",
+    "ctaCta": "Contactar"
   }
 }

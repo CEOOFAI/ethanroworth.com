@@ -90,5 +90,182 @@
       "description": "Got a project in mind? I'd love to hear about it. Whether it's a new website, an automation workflow, or an SEO strategy, let's make it happen.",
       "cta": "Get in Touch"
     }
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "title": "Let's talk.",
+    "subtitle": "Tell me about your project. I'll get back to you within 24 hours.",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "John Smith",
+      "email": "Your Email",
+      "emailPlaceholder": "john@example.com",
+      "service": "What do you need?",
+      "budget": "Budget Range",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell me about your project, your goals, and what you're looking for...",
+      "submit": "Send Message",
+      "sent": "Message Sent!"
+    },
+    "aside": {
+      "email": "Email me directly",
+      "location": "Based in",
+      "response": "Response Time",
+      "responseTime": "Within 24 hours",
+      "bookCall": "Prefer to talk?",
+      "bookCallDescription": "Book a free 15-minute discovery call. No pressure, just a chat about your project.",
+      "bookCallCta": "Book a Call"
+    }
+  },
+  "about": {
+    "label": "About Me",
+    "title": "The full story.",
+    "intro1": "I'm Ethan, 19, based in Gibraltar. I quit my 9-to-5 to go all-in on building websites, automating workflows, and growing businesses through SEO.",
+    "intro2": "I believe the best way to learn is by doing. So I built 16+ sites across real estate, tourism, and local services to prove I could do it for real.",
+    "quote": "\"I quit the 9-to-5 at 19 to build the web.\"",
+    "story": "Most people my age are in university or climbing the corporate ladder. I chose a different path. I taught myself web design, SEO, and AI automation by building real projects for real niches. No courses, no bootcamps. Just shipping work and learning from every mistake.",
+    "stats": "16+ sites built · Bilingual (EN/ES) · Gibraltar & La Linea",
+    "timelineLabel": "The Journey",
+    "timelineTitle": "How I got here.",
+    "timeline": {
+      "started": {
+        "title": "Started learning web development",
+        "description": "Picked up HTML, CSS, and JavaScript. Built my first sites. Got hooked on the idea of making things for the internet."
+      },
+      "portfolio": {
+        "title": "Built the SEO portfolio",
+        "description": "Started buying domains and building content sites targeting Gibraltar and La Linea. Real estate, tourism, relocation, fitness."
+      },
+      "quit": {
+        "title": "Quit the 9-to-5",
+        "description": "Left my job to go full-time on freelancing. Scary? Yes. Worth it? Absolutely. Time is the most valuable thing I have."
+      },
+      "freelance": {
+        "title": "Launched freelance services",
+        "description": "Started offering web design, AI automation, and SEO to businesses in Gibraltar and La Linea. Built this site to prove what I can do."
+      }
+    },
+    "skillsLabel": "What I Work With",
+    "skillsTitle": "Tools and skills.",
+    "valuesLabel": "What I Believe",
+    "valuesTitle": "How I work.",
+    "values": {
+      "craft": {
+        "title": "Quality over speed",
+        "description": "I'd rather take an extra day and deliver something great than rush out something mediocre. Every project gets my full attention."
+      },
+      "honesty": {
+        "title": "Straight talk",
+        "description": "No jargon, no bullshit. I'll tell you what I think, what I can do, and what's realistic. You'll always know where things stand."
+      },
+      "speed": {
+        "title": "Ship fast, iterate",
+        "description": "Perfect is the enemy of done. I ship, get feedback, and improve. Your site goes live fast and gets better from there."
+      }
+    },
+    "ctaTitle": "Want to work together?",
+    "ctaCta": "Get in Touch"
+  },
+  "work": {
+    "label": "Portfolio",
+    "title": "My work."
+  },
+  "services": {
+    "label": "Services",
+    "title": "What I build.",
+    "subtitle": "Web design, AI automation, and SEO for businesses in Gibraltar and La Linea. Everything you need to look great online and get found.",
+    "details": {
+      "webDesign": {
+        "title": "Web Design",
+        "description": "Custom websites built from scratch. Not templates, not page builders. Real code, real design, built to convert.",
+        "point1": "Mobile-first, responsive design",
+        "point2": "Fast loading speeds (optimised for Core Web Vitals)",
+        "point3": "SEO-ready from day one",
+        "point4": "Content management so you can update it yourself"
+      },
+      "aiAutomation": {
+        "title": "AI Automation",
+        "description": "Smart workflows that handle the repetitive stuff so you can focus on what matters. Save hours every week.",
+        "point1": "Custom AI agents and chatbots",
+        "point2": "Automated email and follow-up workflows",
+        "point3": "Data processing and reporting",
+        "point4": "Integration with your existing tools"
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Get found on Google. Multilingual content, technical SEO, and keyword targeting built for the Gibraltar market.",
+        "point1": "Keyword research and content strategy",
+        "point2": "Multilingual content (English and Spanish)",
+        "point3": "Technical SEO (schema, sitemaps, speed)",
+        "point4": "Monthly reporting and recommendations"
+      }
+    },
+    "pricingLabel": "Pricing",
+    "pricingTitle": "Simple, honest pricing.",
+    "popular": "Most Popular",
+    "packages": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small local businesses that need a professional online presence."
+      },
+      "business": {
+        "name": "Business",
+        "description": "For growing businesses that need more features and flexibility."
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Full-service package for businesses that want everything done right."
+      }
+    },
+    "features": {
+      "fivePages": "Up to 5 pages",
+      "responsive": "Mobile responsive design",
+      "contactForm": "Contact form",
+      "basicSeo": "Basic SEO setup",
+      "analytics": "Google Analytics integration",
+      "oneRevision": "1 round of revisions",
+      "oneToTwoWeeks": "Delivered in 1-2 weeks",
+      "tenPages": "Up to 10 pages",
+      "starterPlus": "Everything in Starter",
+      "cms": "Content management system",
+      "blog": "Blog or news section",
+      "gmb": "Google My Business optimisation",
+      "social": "Social media integration",
+      "twoRevisions": "2 rounds of revisions",
+      "twoToThreeWeeks": "Delivered in 2-3 weeks",
+      "twentyPages": "Up to 20 pages",
+      "businessPlus": "Everything in Business",
+      "multilingual": "Multilingual support",
+      "advancedSeo": "Advanced SEO",
+      "ecommerce": "E-commerce or booking integration",
+      "custom": "Custom functionality",
+      "threeRevisions": "3 rounds of revisions",
+      "threeToFiveWeeks": "Delivered in 3-5 weeks"
+    },
+    "getStarted": "Get Started",
+    "pricingNote": "All prices are one-time. Monthly management plans available from £60/month.",
+    "processLabel": "How It Works",
+    "processTitle": "From idea to launch.",
+    "process": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "We talk about your business, your goals, and what you need. No jargon, just a real conversation."
+      },
+      "design": {
+        "title": "Design",
+        "description": "I create a design that fits your brand and speaks to your audience. You see it before anything gets built."
+      },
+      "build": {
+        "title": "Build",
+        "description": "Your site gets built with clean code, fast loading times, and SEO baked in from the start."
+      },
+      "launch": {
+        "title": "Launch",
+        "description": "We go live. I make sure everything works perfectly and hand you the keys to your new digital home."
+      }
+    },
+    "ctaTitle": "Ready to start?",
+    "ctaDescription": "Let's talk about your project. No commitment, just a conversation.",
+    "ctaCta": "Get in Touch"
   }
 }
