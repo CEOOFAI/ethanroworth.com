@@ -1,147 +1,72 @@
 "use client";
 
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 
 const projects = [
   {
-    slug: "faux-garden",
     title: "Faux Garden",
     category: "Web Design",
     year: "2026",
-    tech: "Next.js · Tailwind",
     url: "fauxgarden.com",
     accent: "#d4a574",
     bgColor: "#1a1510",
-    // Mockup layout: jewellery e-commerce
-    mockup: {
-      hero: "Handcrafted Jewellery",
-      nav: ["Shop", "Collections", "About"],
-      blocks: 3,
-      style: "ecommerce",
-    },
   },
   {
-    slug: "country-of-gibraltar",
     title: "Country of Gibraltar",
     category: "SEO",
     year: "2025",
-    tech: "SEO · Multilingual",
     url: "countryofgibraltar.com",
     accent: "#6bcf8e",
     bgColor: "#0f1a12",
-    mockup: {
-      hero: "Discover Gibraltar",
-      nav: ["Explore", "Travel", "Live"],
-      blocks: 4,
-      style: "content",
-    },
   },
   {
-    slug: "rent-gibraltar",
     title: "Rent Gibraltar",
     category: "Web Design",
     year: "2025",
-    tech: "Next.js · Supabase",
     url: "rentgibraltar.com",
     accent: "#7ba7d4",
     bgColor: "#0f141a",
-    mockup: {
-      hero: "Find Your Home",
-      nav: ["Listings", "Areas", "Contact"],
-      blocks: 3,
-      style: "listings",
-    },
   },
   {
-    slug: "timelock",
     title: "Timelock",
     category: "Web App",
     year: "2026",
-    tech: "React · Supabase",
     url: "timelock.app",
     accent: "#b87fd4",
     bgColor: "#14101a",
-    mockup: {
-      hero: "Lock In Your Focus",
-      nav: ["Dashboard", "Timer", "Stats"],
-      blocks: 2,
-      style: "app",
-    },
   },
 ];
 
-function BrowserMockup({ project }: { project: typeof projects[number] }) {
-  const { accent, bgColor, url, mockup } = project;
+function SitePreview({ project }: { project: typeof projects[number] }) {
+  const { bgColor, url } = project;
+  const screenshotUrl = `https://image.thum.io/get/width/760/crop/520/https://${url}`;
 
   return (
     <div
-      className="w-[380px] h-[260px] rounded-lg overflow-hidden shadow-2xl"
+      className="w-[380px] rounded-lg overflow-hidden shadow-2xl"
       style={{ background: bgColor }}
     >
       {/* Browser chrome */}
       <div className="flex items-center gap-2 px-3 py-2 bg-white/[0.06] border-b border-white/[0.06]">
-        {/* Traffic lights */}
         <div className="flex gap-1.5">
           <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
           <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
           <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
         </div>
-        {/* URL bar */}
         <div className="flex-1 mx-2 px-3 py-1 rounded bg-white/[0.06] text-[10px] font-body text-white/40 truncate">
           {url}
         </div>
       </div>
 
-      {/* Page content mockup */}
-      <div className="p-4 space-y-3">
-        {/* Nav */}
-        <div className="flex items-center justify-between mb-2">
-          <div className="w-16 h-1.5 rounded-full" style={{ background: accent, opacity: 0.6 }} />
-          <div className="flex gap-3">
-            {mockup.nav.map((item) => (
-              <span key={item} className="text-[8px] font-body text-white/25">{item}</span>
-            ))}
-          </div>
-        </div>
-
-        {/* Hero text */}
-        <div className="pt-2 pb-3">
-          <div className="font-display text-base text-white/80 leading-tight">{mockup.hero}</div>
-          <div className="mt-2 space-y-1">
-            <div className="w-3/4 h-1 rounded-full bg-white/10" />
-            <div className="w-1/2 h-1 rounded-full bg-white/10" />
-          </div>
-          <div
-            className="mt-3 w-16 h-5 rounded text-[8px] font-body flex items-center justify-center text-white/80"
-            style={{ background: `${accent}40`, border: `1px solid ${accent}60` }}
-          >
-            View
-          </div>
-        </div>
-
-        {/* Content blocks */}
-        <div className="flex gap-2">
-          {Array.from({ length: mockup.blocks }).map((_, i) => (
-            <div
-              key={i}
-              className="flex-1 rounded"
-              style={{
-                height: mockup.style === "app" ? 60 : 40,
-                background: i === 0 ? `${accent}15` : "rgba(255,255,255,0.04)",
-                border: i === 0 ? `1px solid ${accent}30` : "1px solid rgba(255,255,255,0.06)",
-              }}
-            >
-              <div className="p-2 space-y-1">
-                <div className="w-3/4 h-1 rounded-full" style={{ background: i === 0 ? `${accent}40` : "rgba(255,255,255,0.08)" }} />
-                <div className="w-1/2 h-1 rounded-full bg-white/[0.05]" />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Real screenshot */}
+      <img
+        src={screenshotUrl}
+        alt={`${project.title} preview`}
+        className="w-full h-[220px] object-cover object-top"
+        loading="lazy"
+      />
     </div>
   );
 }
@@ -276,7 +201,7 @@ export default function SelectedWork() {
         style={{ opacity: 0, transform: "scale(0.8)" }}
       >
         {activeProject !== null && (
-          <BrowserMockup project={projects[activeProject]} />
+          <SitePreview project={projects[activeProject]} />
         )}
       </div>
 
@@ -297,9 +222,11 @@ export default function SelectedWork() {
           <div className="work-line h-[1px] bg-text-dark/10 origin-left" style={prefersReducedMotion ? {} : { transform: "scaleX(0)" }} />
 
           {projects.map((project, i) => (
-            <div key={project.slug}>
-              <Link
-                href={`/work/${project.slug}`}
+            <div key={project.url}>
+              <a
+                href={`https://${project.url}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="work-row group block py-10 md:py-14"
                 style={prefersReducedMotion ? {} : { opacity: 0 }}
                 onMouseEnter={() => setActiveProject(i)}
@@ -346,7 +273,7 @@ export default function SelectedWork() {
                     </span>
                   </div>
                 </div>
-              </Link>
+              </a>
 
               {/* Separator line */}
               <div
@@ -362,14 +289,13 @@ export default function SelectedWork() {
 
         {/* View all */}
         <div className="mt-16">
-          <Link
-            href="/work"
-            className="group inline-flex items-center gap-4 font-body text-sm tracking-[0.15em] uppercase text-text-dark hover:text-accent transition-colors duration-300"
+          <span
+            className="group inline-flex items-center gap-4 font-body text-sm tracking-[0.15em] uppercase text-text-dark hover:text-accent transition-colors duration-300 cursor-default"
             data-magnetic
           >
             {t("viewAll")}
             <span className="block w-8 h-[1px] bg-accent group-hover:w-16 transition-all duration-500" />
-          </Link>
+          </span>
         </div>
       </div>
     </section>
