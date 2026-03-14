@@ -6,6 +6,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import { heroPreset } from "@/components/backgrounds/HyperspeedPresets";
+import Aurora from "@/components/backgrounds/Aurora";
 
 const Hyperspeed = dynamic(
   () => import("@/components/backgrounds/Hyperspeed"),
@@ -138,10 +139,14 @@ export default function Hero() {
       ref={sectionRef}
       className="relative min-h-screen flex flex-col justify-between bg-black overflow-hidden"
     >
-      {/* Hyperspeed background — disabled on mobile for performance */}
-      {!isMobile && (
+      {/* Desktop: Hyperspeed | Mobile: Aurora */}
+      {!isMobile ? (
         <div className="absolute inset-0 z-0 opacity-60">
           <Hyperspeed effectOptions={heroPreset} />
+        </div>
+      ) : (
+        <div className="absolute inset-0 z-0">
+          <Aurora />
         </div>
       )}
 
