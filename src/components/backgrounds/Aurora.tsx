@@ -5,7 +5,7 @@ export default function Aurora() {
     <div className="absolute inset-0 overflow-hidden">
       {/* Orange blob - top right */}
       <div
-        className="aurora-blob absolute w-[600px] h-[600px] rounded-full opacity-30"
+        className="aurora-blob absolute w-[600px] h-[600px] rounded-full opacity-50"
         style={{
           background: "radial-gradient(circle, #ff4d00 0%, transparent 70%)",
           top: "-10%",
@@ -17,7 +17,7 @@ export default function Aurora() {
 
       {/* Blue blob - bottom left */}
       <div
-        className="aurora-blob absolute w-[500px] h-[500px] rounded-full opacity-25"
+        className="aurora-blob absolute w-[500px] h-[500px] rounded-full opacity-45"
         style={{
           background: "radial-gradient(circle, #0066ff 0%, transparent 70%)",
           bottom: "-5%",
@@ -29,7 +29,7 @@ export default function Aurora() {
 
       {/* Orange secondary - center */}
       <div
-        className="aurora-blob absolute w-[400px] h-[400px] rounded-full opacity-15"
+        className="aurora-blob absolute w-[400px] h-[400px] rounded-full opacity-30"
         style={{
           background: "radial-gradient(circle, #ff6a2a 0%, transparent 70%)",
           top: "40%",
@@ -41,7 +41,7 @@ export default function Aurora() {
 
       {/* Blue secondary - top left */}
       <div
-        className="aurora-blob absolute w-[350px] h-[350px] rounded-full opacity-20"
+        className="aurora-blob absolute w-[350px] h-[350px] rounded-full opacity-35"
         style={{
           background: "radial-gradient(circle, #0066ff 0%, transparent 70%)",
           top: "10%",

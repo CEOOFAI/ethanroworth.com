@@ -14,7 +14,7 @@ const Hyperspeed = dynamic(
 );
 
 function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
   useEffect(() => {
     const check = window.matchMedia("(max-width: 768px)").matches ||
       window.matchMedia("(pointer: coarse)").matches;
@@ -140,19 +140,20 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col justify-between bg-black overflow-hidden"
     >
       {/* Desktop: Hyperspeed | Mobile: Aurora */}
-      {!isMobile ? (
-        <div className="absolute inset-0 z-0 opacity-60">
-          <Hyperspeed effectOptions={heroPreset} />
-        </div>
-      ) : (
+      {isMobile === null ? null : isMobile ? (
         <div className="absolute inset-0 z-0">
           <Aurora />
         </div>
+      ) : (
+        <div className="absolute inset-0 z-0 opacity-60">
+          <Hyperspeed effectOptions={heroPreset} />
+        </div>
       )}
 
-      {/* Gradient overlay for text readability */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black via-transparent to-black/60" />
+      {/* Gradient overlay for text readability — lighter on mobile so Aurora shows through */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/80 via-black/40 to-transparent md:block hidden" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/50 via-transparent to-transparent md:hidden" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black/80 via-transparent to-black/30 md:from-black md:via-transparent md:to-black/60" />
 
       {/* Main content - left aligned */}
       <div className="hero-content relative z-10 flex-1 flex items-center px-6 md:px-16 lg:px-24 pt-32 pb-16">
