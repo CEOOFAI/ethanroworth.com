@@ -41,31 +41,62 @@ export default function CustomCursor() {
       gsap.to(dot, { scale: 1, duration: 0.3, ease: "power2.out" });
     };
 
+    // Magnetic effect — element pulls toward cursor on hover
+    const magneticElements = new Map<Element, { moveHandler: (e: MouseEvent) => void; leaveHandler: () => void }>();
+
+    const setupMagnetic = (el: Element) => {
+      if (magneticElements.has(el)) return;
+
+      const moveHandler = (e: MouseEvent) => {
+        const rect = (el as HTMLElement).getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const deltaX = (e.clientX - centerX) * 0.3;
+        const deltaY = (e.clientY - centerY) * 0.3;
+        gsap.to(el, { x: deltaX, y: deltaY, duration: 0.3, ease: "power2.out" });
+      };
+
+      const leaveHandler = () => {
+        gsap.to(el, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
+      };
+
+      el.addEventListener("mousemove", moveHandler as EventListener);
+      el.addEventListener("mouseleave", leaveHandler);
+      magneticElements.set(el, { moveHandler: moveHandler as (e: MouseEvent) => void, leaveHandler });
+    };
+
     window.addEventListener("mousemove", onMouseMove);
 
     // Add hover effects to interactive elements
-    const interactives = document.querySelectorAll("a, button, [role='button'], [data-magnetic]");
-    interactives.forEach((el) => {
-      el.addEventListener("mouseenter", onMouseEnterInteractive);
-      el.addEventListener("mouseleave", onMouseLeaveInteractive);
-    });
-
-    // MutationObserver to catch dynamically added elements
-    const observer = new MutationObserver(() => {
-      const newInteractives = document.querySelectorAll("a, button, [role='button'], [data-magnetic]");
-      newInteractives.forEach((el) => {
+    const setupInteractives = () => {
+      const interactives = document.querySelectorAll("a, button, [role='button'], [data-magnetic]");
+      interactives.forEach((el) => {
         el.addEventListener("mouseenter", onMouseEnterInteractive);
         el.addEventListener("mouseleave", onMouseLeaveInteractive);
       });
-    });
+
+      // Magnetic effect only on [data-magnetic] elements
+      const magnetics = document.querySelectorAll("[data-magnetic]");
+      magnetics.forEach(setupMagnetic);
+    };
+
+    setupInteractives();
+
+    // MutationObserver to catch dynamically added elements
+    const observer = new MutationObserver(setupInteractives);
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
       observer.disconnect();
+      const interactives = document.querySelectorAll("a, button, [role='button'], [data-magnetic]");
       interactives.forEach((el) => {
         el.removeEventListener("mouseenter", onMouseEnterInteractive);
         el.removeEventListener("mouseleave", onMouseLeaveInteractive);
+      });
+      magneticElements.forEach(({ moveHandler, leaveHandler }, el) => {
+        el.removeEventListener("mousemove", moveHandler as EventListener);
+        el.removeEventListener("mouseleave", leaveHandler);
       });
     };
   }, []);

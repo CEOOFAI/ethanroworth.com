@@ -12,6 +12,16 @@ const Hyperspeed = dynamic(
   { ssr: false }
 );
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = window.matchMedia("(max-width: 768px)").matches ||
+      window.matchMedia("(pointer: coarse)").matches;
+    setIsMobile(check);
+  }, []);
+  return isMobile;
+}
+
 function AnimatedName({ name }: { name: string }) {
   return (
     <span className="inline-block overflow-hidden">
@@ -32,6 +42,7 @@ export default function Hero() {
   const t = useTranslations("home.hero");
   const sectionRef = useRef<HTMLElement>(null);
   const [time, setTime] = useState("");
+  const isMobile = useIsMobile();
 
   // Live clock - Gibraltar time
   useEffect(() => {
@@ -127,10 +138,12 @@ export default function Hero() {
       ref={sectionRef}
       className="relative min-h-screen flex flex-col justify-between bg-black overflow-hidden"
     >
-      {/* Hyperspeed background */}
-      <div className="absolute inset-0 z-0 opacity-60">
-        <Hyperspeed effectOptions={heroPreset} />
-      </div>
+      {/* Hyperspeed background — disabled on mobile for performance */}
+      {!isMobile && (
+        <div className="absolute inset-0 z-0 opacity-60">
+          <Hyperspeed effectOptions={heroPreset} />
+        </div>
+      )}
 
       {/* Gradient overlay for text readability */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
