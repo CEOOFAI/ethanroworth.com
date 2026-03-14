@@ -12,8 +12,16 @@ const projects = [
     category: "Web Design",
     year: "2026",
     tech: "Next.js · Tailwind",
-    gradient: "from-amber-900/80 via-orange-800/60 to-yellow-900/40",
+    url: "fauxgarden.com",
     accent: "#d4a574",
+    bgColor: "#1a1510",
+    // Mockup layout: jewellery e-commerce
+    mockup: {
+      hero: "Handcrafted Jewellery",
+      nav: ["Shop", "Collections", "About"],
+      blocks: 3,
+      style: "ecommerce",
+    },
   },
   {
     slug: "country-of-gibraltar",
@@ -21,8 +29,15 @@ const projects = [
     category: "SEO",
     year: "2025",
     tech: "SEO · Multilingual",
-    gradient: "from-emerald-900/80 via-green-800/60 to-teal-900/40",
+    url: "countryofgibraltar.com",
     accent: "#6bcf8e",
+    bgColor: "#0f1a12",
+    mockup: {
+      hero: "Discover Gibraltar",
+      nav: ["Explore", "Travel", "Live"],
+      blocks: 4,
+      style: "content",
+    },
   },
   {
     slug: "rent-gibraltar",
@@ -30,8 +45,15 @@ const projects = [
     category: "Web Design",
     year: "2025",
     tech: "Next.js · Supabase",
-    gradient: "from-blue-900/80 via-indigo-800/60 to-sky-900/40",
+    url: "rentgibraltar.com",
     accent: "#7ba7d4",
+    bgColor: "#0f141a",
+    mockup: {
+      hero: "Find Your Home",
+      nav: ["Listings", "Areas", "Contact"],
+      blocks: 3,
+      style: "listings",
+    },
   },
   {
     slug: "timelock",
@@ -39,10 +61,90 @@ const projects = [
     category: "Web App",
     year: "2026",
     tech: "React · Supabase",
-    gradient: "from-violet-900/80 via-purple-800/60 to-fuchsia-900/40",
+    url: "timelock.app",
     accent: "#b87fd4",
+    bgColor: "#14101a",
+    mockup: {
+      hero: "Lock In Your Focus",
+      nav: ["Dashboard", "Timer", "Stats"],
+      blocks: 2,
+      style: "app",
+    },
   },
 ];
+
+function BrowserMockup({ project }: { project: typeof projects[number] }) {
+  const { accent, bgColor, url, mockup } = project;
+
+  return (
+    <div
+      className="w-[380px] h-[260px] rounded-lg overflow-hidden shadow-2xl"
+      style={{ background: bgColor }}
+    >
+      {/* Browser chrome */}
+      <div className="flex items-center gap-2 px-3 py-2 bg-white/[0.06] border-b border-white/[0.06]">
+        {/* Traffic lights */}
+        <div className="flex gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
+        </div>
+        {/* URL bar */}
+        <div className="flex-1 mx-2 px-3 py-1 rounded bg-white/[0.06] text-[10px] font-body text-white/40 truncate">
+          {url}
+        </div>
+      </div>
+
+      {/* Page content mockup */}
+      <div className="p-4 space-y-3">
+        {/* Nav */}
+        <div className="flex items-center justify-between mb-2">
+          <div className="w-16 h-1.5 rounded-full" style={{ background: accent, opacity: 0.6 }} />
+          <div className="flex gap-3">
+            {mockup.nav.map((item) => (
+              <span key={item} className="text-[8px] font-body text-white/25">{item}</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Hero text */}
+        <div className="pt-2 pb-3">
+          <div className="font-display text-base text-white/80 leading-tight">{mockup.hero}</div>
+          <div className="mt-2 space-y-1">
+            <div className="w-3/4 h-1 rounded-full bg-white/10" />
+            <div className="w-1/2 h-1 rounded-full bg-white/10" />
+          </div>
+          <div
+            className="mt-3 w-16 h-5 rounded text-[8px] font-body flex items-center justify-center text-white/80"
+            style={{ background: `${accent}40`, border: `1px solid ${accent}60` }}
+          >
+            View
+          </div>
+        </div>
+
+        {/* Content blocks */}
+        <div className="flex gap-2">
+          {Array.from({ length: mockup.blocks }).map((_, i) => (
+            <div
+              key={i}
+              className="flex-1 rounded"
+              style={{
+                height: mockup.style === "app" ? 60 : 40,
+                background: i === 0 ? `${accent}15` : "rgba(255,255,255,0.04)",
+                border: i === 0 ? `1px solid ${accent}30` : "1px solid rgba(255,255,255,0.06)",
+              }}
+            >
+              <div className="p-2 space-y-1">
+                <div className="w-3/4 h-1 rounded-full" style={{ background: i === 0 ? `${accent}40` : "rgba(255,255,255,0.08)" }} />
+                <div className="w-1/2 h-1 rounded-full bg-white/[0.05]" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function SelectedWork() {
   const t = useTranslations("home.work");
@@ -70,8 +172,8 @@ export default function SelectedWork() {
       const y = e.clientY - rect.top - 125;
       mousePos.current = { x: e.clientX, y: e.clientY };
 
-      xTo(x);
-      yTo(y);
+      xTo(x - 15);
+      yTo(y - 5);
 
       // Slight rotation based on horizontal movement
       const deltaX = e.clientX - prevX;
@@ -174,45 +276,7 @@ export default function SelectedWork() {
         style={{ opacity: 0, transform: "scale(0.8)" }}
       >
         {activeProject !== null && (
-          <div
-            className={`w-[350px] h-[250px] rounded-lg overflow-hidden bg-gradient-to-br ${projects[activeProject].gradient} relative`}
-          >
-            {/* Large number watermark */}
-            <span
-              className="absolute -top-4 -right-2 font-display text-[10rem] leading-none select-none pointer-events-none"
-              style={{ color: projects[activeProject].accent, opacity: 0.12 }}
-            >
-              {String(activeProject + 1).padStart(2, "0")}
-            </span>
-
-            {/* Card content */}
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <span
-                className="text-xs font-body tracking-[0.2em] uppercase block mb-2"
-                style={{ color: projects[activeProject].accent }}
-              >
-                {projects[activeProject].category}
-              </span>
-              <h4 className="font-display text-2xl text-white mb-1">
-                {projects[activeProject].title}
-              </h4>
-              <span className="text-xs font-body text-white/50">
-                {projects[activeProject].tech}
-              </span>
-            </div>
-
-            {/* Corner accent */}
-            <div className="absolute top-4 left-4 w-8 h-8">
-              <div
-                className="absolute top-0 left-0 w-full h-[2px]"
-                style={{ background: projects[activeProject].accent }}
-              />
-              <div
-                className="absolute top-0 left-0 h-full w-[2px]"
-                style={{ background: projects[activeProject].accent }}
-              />
-            </div>
-          </div>
+          <BrowserMockup project={projects[activeProject]} />
         )}
       </div>
 
